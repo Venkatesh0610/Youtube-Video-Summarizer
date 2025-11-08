@@ -10,6 +10,10 @@ The core goal is to demonstrate the **blazing speed** and effectiveness of Groq'
 
 -----
 
+**Access Deployed App (Try It Out)**: 👉[Youtube Video Summarizer](https://youtube-video-summarizergit-nbyzrvjnrnyguczjrrkwhi.streamlit.app/). 
+
+-----
+
 ## ✨ Features
 
 This application transforms passive viewing into actionable insights:
