@@ -5,6 +5,8 @@ langchain-groq
 langchain-community
 youtube-search
 validators
+youtube-transcript-api
 # Optional for API:
 fastapi
 uvicorn
+
