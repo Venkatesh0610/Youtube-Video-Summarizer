@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "691cc14f-7391-41d1-bd5d-31020c286956",
+		"name": "youtube-summarizer-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19068959"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/summarize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"youtube_url\": \"https://youtu.be/OVc2iAiErog?si=NWSYiWzqILxtu4_Q\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/summarize",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"summarize"
+					]
+				},
+				"description": "**Purpose:**  \n  \nGenerates a concise summary (≈300 words) from a YouTube transcript or raw text.\n\n**Input:**\n\n- `transcript_text`: full transcript or article text\n    \n- `groq_api_key`: your Groq API key\n    \n\n**Output:**\n\n- `summary`: short summarized version of the content"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/summarize",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"youtube_url\": \"https://youtu.be/OVc2iAiErog?si=NWSYiWzqILxtu4_Q\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/summarize",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"summarize"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"summary\": \"Here's a clear and concise summary of the content (~300 words):\\n\\nLangraph is a Python library that enables the creation of state machines using language models, allowing for the building of complex AI workflows. It's an extension of Langchain, which helps chain together language model operations. Langraph takes this a step further by introducing graph logic, enabling the creation of stateful visual flows.\\n\\nThe library consists of three main building blocks: nodes, edges, and conditional edges. Nodes are the actions that can be performed, such as running a function or making a call to an API. Edges are the connections between nodes, defining the flow of the process. Conditional edges allow for dynamic decision-making based on conditions, enabling the agent to choose between different nodes.\\n\\nFor example, a Langraph flow might look like this: start, chatbot, tool, end. However, with conditional edges, the agent can decide which node to go to based on the user's input. If the user asks a factual question, the agent might go to Wikipedia, while if they ask for a calculation, the agent might go to a math tool.\\n\\nThe library provides a clean and visual structure for building AI agents that can use tools, make decisions based on conditions, and know what to do next. This is similar to a vending machine, where selecting a snack (node) triggers the dispensing of the snack (edge), but with a condition to heat it if it's a hot snack.\\n\\nIn summary, Langraph empowers developers to create complex AI workflows by providing nodes for logic, edges for flow, and conditions for dynamic decision-making. This library gives language models a brain with logic and control, enabling the creation of sophisticated AI agents. In a future video, the creator plans to build a working chatbot using Langraph with tools like Wikipedia and a custom math function.\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/translate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"summary_text\": \"Here's a clear and concise summary of the content (~300 words):\\n\\nLangraph is a Python library that enables the creation of state machines using language models, allowing for the building of complex AI workflows. It's an extension of Langchain, which helps chain together language model operations. Langraph takes this a step further by introducing graph logic, enabling the creation of stateful visual flows.\\n\\nThe library consists of three main building blocks: nodes, edges, and conditional edges. Nodes are the actions that can be performed, such as running a function or making a call to an API. Edges are the connections between nodes, defining the flow of the process. Conditional edges allow for dynamic decision-making based on conditions, enabling the agent to choose between different nodes.\\n\\nFor example, a Langraph flow might look like this: start, chatbot, tool, end. However, with conditional edges, the agent can decide which node to go to based on the user's input. If the user asks a factual question, the agent might go to Wikipedia, while if they ask for a calculation, the agent might go to a math tool.\\n\\nThe library provides a clean and visual structure for building AI agents that can use tools, make decisions based on conditions, and know what to do next. This is similar to a vending machine, where selecting a snack (node) triggers the dispensing of the snack (edge), but with a condition to heat it if it's a hot snack.\\n\\nIn summary, Langraph empowers developers to create complex AI workflows by providing nodes for logic, edges for flow, and conditions for dynamic decision-making. This library gives language models a brain with logic and control, enabling the creation of sophisticated AI agents. In a future video, the creator plans to build a working chatbot using Langraph with tools like Wikipedia and a custom math function.\",\n  \"target_language\": \"Hindi\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/translate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"translate"
+					]
+				},
+				"description": "**Purpose:**\n\nTranslates the generated summary into any target language.\n\n**Input:**\n\n- `summary_text`: text of the summary to translate\n    \n- `target_language`: desired language (e.g., `\"Hindi\"`, `\"Spanish\"`)\n    \n- `groq_api_key`: your Groq API key\n    \n\n**Output:**\n\n- `translated_summary`: translated version of the summary"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/translate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary_text\": \"Here's a clear and concise summary of the content (~300 words):\\n\\nLangraph is a Python library that enables the creation of state machines using language models, allowing for the building of complex AI workflows. It's an extension of Langchain, which helps chain together language model operations. Langraph takes this a step further by introducing graph logic, enabling the creation of stateful visual flows.\\n\\nThe library consists of three main building blocks: nodes, edges, and conditional edges. Nodes are the actions that can be performed, such as running a function or making a call to an API. Edges are the connections between nodes, defining the flow of the process. Conditional edges allow for dynamic decision-making based on conditions, enabling the agent to choose between different nodes.\\n\\nFor example, a Langraph flow might look like this: start, chatbot, tool, end. However, with conditional edges, the agent can decide which node to go to based on the user's input. If the user asks a factual question, the agent might go to Wikipedia, while if they ask for a calculation, the agent might go to a math tool.\\n\\nThe library provides a clean and visual structure for building AI agents that can use tools, make decisions based on conditions, and know what to do next. This is similar to a vending machine, where selecting a snack (node) triggers the dispensing of the snack (edge), but with a condition to heat it if it's a hot snack.\\n\\nIn summary, Langraph empowers developers to create complex AI workflows by providing nodes for logic, edges for flow, and conditions for dynamic decision-making. This library gives language models a brain with logic and control, enabling the creation of sophisticated AI agents. In a future video, the creator plans to build a working chatbot using Langraph with tools like Wikipedia and a custom math function.\",\n  \"target_language\": \"Hindi\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/translate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"translate"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"translation\": \"Langraph एक पाइथन लाइब्रेरी है जो भाषा मॉडलों का उपयोग करके स्टेट मशीन का निर्माण करने की अनुमति देती है, जिससे जटिल AI कार्यों का निर्माण किया जा सकता है। यह Langchain का विस्तार है, जो भाषा मॉडल ऑपरेशनों को संयोजित करने में मदद करता है। Langraph ने ग्राफ़ लॉजिक को पेश किया है, जिससे स्टेटफुल विज़ुअल फ्लो का निर्माण किया जा सकता है।\\n\\nलाइब्रेरी में तीन मुख्य निर्माण ब्लॉक हैं: नोड्स, एजेज़, और कंडीशनल एजेज़। नोड्स वह कार्य हैं जो किए जा सकते हैं, जैसे कि एक फंक्शन को चलाना या एक API को कॉल करना। एजेज़ नोड्स के बीच के कनेक्शन हैं, जो प्रक्रिया के फ्लो को परिभाषित करते हैं। कंडीशनल एजेज़ कंडीशन पर आधारित डायनामिक निर्णय लेने की अनुमति देते हैं, जिससे एजेंट को विभिन्न नोड्स का चयन करने के लिए मजबूर होता है।\\n\\nउदाहरण के लिए, एक Langraph फ्लो यह हो सकता है: शुरू, चैटबॉट, टूल, अंत। हालांकि, कंडीशनल एजेज़ के साथ, एजेंट उपयोगकर्ता की प्रवृत्ति पर निर्भर करते हुए नोड का चयन करने के लिए मजबूर हो सकता है। यदि उपयोगकर्ता एक तथ्यात्मक प्रश्न पूछता है, तो एजेंट विकिपीडिया की ओर जा सकता है, जबकि यदि वे एक गणना के लिए पूछते हैं, तो एजेंट एक गणितीय उपकरण की ओर जा सकता है।\\n\\nलाइब्रेरी एक साफ और विज़ुअल संरचना प्रदान करती है जिससे AI एजेंट बनाया जा सकता है जो टूल्स का उपयोग कर सकते हैं, कंडीशन पर आधारित निर्णय ले सकते हैं, और आगे क्या करना है, यह जानते हैं। यह एक वेंडिंग मशीन की तरह है, जहां एक नाश्ते (नोड) की सelection करने पर नाश्ते को निकालने के लिए एजेज़ ट्रिगर होता है, लेकिन एक कंडीशन के साथ जो गर्म नाश्ता है वह गर्म किया जाए।\\n\\nनिष्कर्ष में, Langraph विकासकों को जटिल AI कार्यों का निर्माण करने की अनुमति देता है जो लॉजिक, एजेज़, और कंडीशन के लिए डायनामिक निर्णय लेने की अनुमति देता है। यह लाइब्रेरी भाषा मॉडल को एक ब्रेन देती है जिसमें लॉजिक और नियंत्रण होता है, जिससे जटिल AI एजेंट का निर्माण किया जा सकता है। भविष्य के वीडियो में, निर्माता Langraph का उपयोग करके विकिपीडिया और एक कस्टम गणितीय फंक्शन जैसे टूल्स के साथ एक काम करने वाला चैटबॉट बनाने की योजना बना रहे हैं।\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/notes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"transcript_text\": \"LangGraph is a Python library built on top of LangChain that allows developers to create stateful, graph-based AI workflows. It introduces nodes, edges, and conditional edges to define logic and control flow for LLM-based systems. Developers can build intelligent agents capable of making conditional decisions, such as choosing between different tools based on input context. LangGraph simplifies multi-step reasoning and tool orchestration, making it easier to design advanced AI systems with transparency and structure.\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/notes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"notes"
+					]
+				},
+				"description": "**Purpose:**  \n  \nCreates detailed, structured **study notes** from the transcript or summary text.\n\n**Input:**\n\n- `transcript_text`: main content to convert into notes\n    \n- `groq_api_key`: your Groq API key\n    \n\n**Output:**\n\n- `notes`: formatted notes with key topics, takeaways, insights, and action steps"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/notes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transcript_text\": \"LangGraph is a Python library built on top of LangChain that allows developers to create stateful, graph-based AI workflows. It introduces nodes, edges, and conditional edges to define logic and control flow for LLM-based systems. Developers can build intelligent agents capable of making conditional decisions, such as choosing between different tools based on input context. LangGraph simplifies multi-step reasoning and tool orchestration, making it easier to design advanced AI systems with transparency and structure.\",\n  \"groq_api_key\": \"YOUR GROQ API KEY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/notes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"notes\": \"**Study Notes: LangGraph and LangChain**\\n\\n** 🔑 Key Topics:**\\n\\n1. **LangGraph Overview**: A Python library built on top of LangChain for creating stateful, graph-based AI workflows.\\n2. **Key Features**: Nodes, edges, and conditional edges for defining logic and control flow in LLM-based systems.\\n3. **Advantages**: Simplifies multi-step reasoning and tool orchestration, enables transparency and structure in advanced AI systems.\\n\\n** 💡 Main Takeaways:**\\n\\n1. LangGraph enables developers to create intelligent agents that can make conditional decisions.\\n2. It simplifies the process of designing complex AI systems with controlled logic and flow.\\n3. LangGraph is built on top of LangChain, providing a powerful foundation for AI workflow development.\\n\\n** 📝 Detailed Insights:**\\n\\n1. **Nodes in LangGraph**: Nodes represent individual components or tasks within an AI workflow. They can be thought of as \\\"boxes\\\" that perform specific operations, such as text processing or data retrieval.\\n2. **Edges in LangGraph**: Edges connect nodes and represent the flow of data or control between them. Conditional edges allow for branching logic and decision-making based on input context.\\n3. **Conditional Edges**: Conditional edges enable intelligent agents to make decisions based on input context. This allows for more sophisticated control flow and decision-making in AI workflows.\\n4. **LM-based Systems**: LangGraph is designed for Large Model (LM) based systems, which leverage the power of language models to perform tasks such as text generation, classification, and more.\\n5. **Stateful Workflows**: LangGraph enables developers to create stateful AI workflows, where the state of the workflow is preserved across multiple steps or iterations.\\n\\n** 🚀 Actionable Steps:**\\n\\n1. **Explore LangGraph Documentation**: Familiarize yourself with the LangGraph documentation and API to learn more about its features and capabilities.\\n2. **Build a Simple AI Workflow**: Create a basic AI workflow using LangGraph to get hands-on experience with its node, edge, and conditional edge concepts.\\n3. **Integrate LangGraph with LangChain**: Learn how to integrate LangGraph with LangChain to leverage the full power of LangChain's language model capabilities in your AI workflows.\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/recommendations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"summary_text\": \"Here's a clear and concise summary of the content (~300 words):\\n\\nLangraph is a Python library that enables the creation of state machines using language models, allowing for the building of complex AI workflows. It's an extension of Langchain, which helps chain together language model operations. Langraph takes this a step further by introducing graph logic, enabling the creation of stateful visual flows.\\n\\nThe library consists of three main building blocks: nodes, edges, and conditional edges. Nodes are the actions that can be performed, such as running a function or making a call to an API. Edges are the connections between nodes, defining the flow of the process. Conditional edges allow for dynamic decision-making based on conditions, enabling the agent to choose between different nodes.\\n\\nFor example, a Langraph flow might look like this: start, chatbot, tool, end. However, with conditional edges, the agent can decide which node to go to based on the user's input. If the user asks a factual question, the agent might go to Wikipedia, while if they ask for a calculation, the agent might go to a math tool.\\n\\nThe library provides a clean and visual structure for building AI agents that can use tools, make decisions based on conditions, and know what to do next. This is similar to a vending machine, where selecting a snack (node) triggers the dispensing of the snack (edge), but with a condition to heat it if it's a hot snack.\\n\\nIn summary, Langraph empowers developers to create complex AI workflows by providing nodes for logic, edges for flow, and conditions for dynamic decision-making. This library gives language models a brain with logic and control, enabling the creation of sophisticated AI agents. In a future video, the creator plans to build a working chatbot using Langraph with tools like Wikipedia and a custom math function.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/recommendations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"recommendations"
+					]
+				},
+				"description": "**Purpose:**  \n  \nGenerates personalized topic or content recommendations based on the provided summary text.\n\n**Input:**\n\n- `summary_text`: summarized content used to extract key themes and suggest related topics.\n    \n\n**Output:**\n\n- `recommendations`: list of suggested topics, learning areas, or related resources."
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/recommendations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary_text\": \"Here's a clear and concise summary of the content (~300 words):\\n\\nLangraph is a Python library that enables the creation of state machines using language models, allowing for the building of complex AI workflows. It's an extension of Langchain, which helps chain together language model operations. Langraph takes this a step further by introducing graph logic, enabling the creation of stateful visual flows.\\n\\nThe library consists of three main building blocks: nodes, edges, and conditional edges. Nodes are the actions that can be performed, such as running a function or making a call to an API. Edges are the connections between nodes, defining the flow of the process. Conditional edges allow for dynamic decision-making based on conditions, enabling the agent to choose between different nodes.\\n\\nFor example, a Langraph flow might look like this: start, chatbot, tool, end. However, with conditional edges, the agent can decide which node to go to based on the user's input. If the user asks a factual question, the agent might go to Wikipedia, while if they ask for a calculation, the agent might go to a math tool.\\n\\nThe library provides a clean and visual structure for building AI agents that can use tools, make decisions based on conditions, and know what to do next. This is similar to a vending machine, where selecting a snack (node) triggers the dispensing of the snack (edge), but with a condition to heat it if it's a hot snack.\\n\\nIn summary, Langraph empowers developers to create complex AI workflows by providing nodes for logic, edges for flow, and conditions for dynamic decision-making. This library gives language models a brain with logic and control, enabling the creation of sophisticated AI agents. In a future video, the creator plans to build a working chatbot using Langraph with tools like Wikipedia and a custom math function.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/recommendations",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"recommendations"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"recommendations\": [\r\n        {\r\n            \"title\": \"LangChain vs LangGraph vs LangSmith\",\r\n            \"url\": \"https://www.youtube.com/watch?v=vJOGC8QJZJQ\"\r\n        },\r\n        {\r\n            \"title\": \"Memory for agents (conceptual video)\",\r\n            \"url\": \"https://www.youtube.com/watch?v=JTL0yp85FsE\"\r\n        },\r\n        {\r\n            \"title\": \"LangGraph Explained for Beginners\",\r\n            \"url\": \"https://www.youtube.com/watch?v=cUfLrn3TM3M\"\r\n        },\r\n        {\r\n            \"title\": \"Agentic Framework LangGraph explained in 8 minutes | Beginners Guide\",\r\n            \"url\": \"https://www.youtube.com/watch?v=1Q_MDOWaljk\"\r\n        },\r\n        {\r\n            \"title\": \"Why Langgraph Stands Out in AI Frameworks\",\r\n            \"url\": \"https://www.youtube.com/watch?v=TigHIJO-_g8\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		}
+	]
+}
